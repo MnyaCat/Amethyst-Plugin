@@ -1,0 +1,50 @@
+{
+  "name": "amethyst-plugin",
+  "version": "0.1.0",
+  "description": "LiteLoaderBDS plugin used on Minecraft server \"Amethyst\"",
+  "main": "dist/amethyst.llse.js",
+  "scripts": {
+    "rename": "node -e \"require('fs').rename('amethyst-plugin.zip', 'amethyst-plugin.llplugin', function(err) {})\"",
+    "llrolad": "node -e \"require('fs').copyFile('amethyst-plugin.llplugin', 'C:/Users/MnyaCat/LiteLoaderBDS-v2.13.0/plugins/amethyst-plugin.llplugin', function(err) {})\"",
+    "build": "tsc && npx npm-pack-zip && npm run rename && npm run llrolad"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "MnyaCat",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/amethyst.llse.js",
+      "require": "./dist/amethyst.llse.js"
+    },
+    "./bed_protection.llse": {
+      "import": "./dist/bed_protection.llse.js",
+      "require": "./dist/bed_protection.llse.js"
+    },
+    "./coordinates_note.llse": {
+      "import": "./dist/coordinates_note.llse.js",
+      "require": "./dist/coordinates_note.llse.js"
+    },
+    "./database.llse": {
+      "import": "./dist/database.llse.js",
+      "require": "./dist/database.llse.js"
+    },
+    "./models.llse": {
+      "import": "./dist/models.llse.js",
+      "require": "./dist/models.llse.js"
+    },
+    "./sudo.llse": {
+      "import": "./dist/sudo.llse.js",
+      "require": "./dist/sudo.llse.js"
+    }
+  }
+}

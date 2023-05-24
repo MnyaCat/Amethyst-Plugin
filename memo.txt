@@ -1,0 +1,18 @@
+# ベッドの座標
+-8, 71, 11
+-6, 71, 12
+-7, 71, 14
+-9, 71, 13
+
+# 頭側
+北 {direction:2,head_piece_bit:1,occupied_bit:0}
+東 {direction:3,head_piece_bit:1,occupied_bit:0}
+南 {direction:0,head_piece_bit:1,occupied_bit:0}
+西 {direction:1,head_piece_bit:1,occupied_bit:0}
+
+
+# 足側
+北 {direction:2,head_piece_bit:0,occupied_bit:0}
+東 {direction:3,head_piece_bit:0,occupied_bit:0}
+南 {direction:0,head_piece_bit:0,occupied_bit:0}
+西 {direction:1,head_piece_bit:0,occupied_bit:0}
